@@ -1,15 +1,4 @@
 import OpenAI from "openai";
-import { sql } from "@vercel/postgres";
-import { z } from "zod";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
-
-const FormSchema = z.object({
-  id: z.string(),
-  messege: z.string(),
-});
-
-const CreateDisovery = FormSchema.omit({ id: true, date: true });
 
 export async function createDiscovery(formData: FormData) {
   const input = formData.get("message") as string;

@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import { createDiscovery } from "@/app/lib/actions";
 
 export default function CreateDiscovery() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    await createDiscovery(formData);
+    const message = formData.get("message");
+    console.log(message);
   };
 
   return (
