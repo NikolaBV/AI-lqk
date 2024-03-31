@@ -1,6 +1,7 @@
 import OpenAI from "openai";
-
+import CreateDiscovery from "@/app/ui/discoveries/create-discovery-form";
 export default async function Page() {
+  /*
   const openai = new OpenAI({
     apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
   });
@@ -11,11 +12,10 @@ export default async function Page() {
   });
 
   const output = completion.choices[0].message.content;
-
+*/
   return (
     <div>
-      <h1>Start discovering</h1>
-      <p>{output}</p>
+      <CreateDiscovery></CreateDiscovery>
     </div>
   );
 }
